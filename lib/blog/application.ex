@@ -1,6 +1,7 @@
 defmodule Blog.Application do
   @moduledoc false
   use Application
+  use Boundary, deps: [Blog, BlogWeb], top_level?: true
 
   # See https://hexdocs.pm/elixir/Application.html
   # for more information on OTP Applications

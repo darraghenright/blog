@@ -16,6 +16,7 @@ defmodule BlogWeb do
   below. Instead, define any helper function in modules
   and import those modules here.
   """
+  use Boundary, deps: [Blog], exports: [Endpoint]
 
   def controller do
     quote do
