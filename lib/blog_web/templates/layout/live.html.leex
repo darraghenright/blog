@@ -1,0 +1,13 @@
+<%= for key <- [:error, :info] do %>
+  <%= if message = live_flash(@flash, key) do %>
+    <div role="alert <%= key %>"
+         phx-click="lv:clear-flash"
+         phx-value-key="<%= key %>">
+      <%= message %>
+    </div>
+  <% end %>
+<% end %>
+
+<main role="main">
+  <%= @inner_content %>
+</main>

@@ -1,0 +1,9 @@
+<%= for key <- [:error, :info] do %>
+  <%= if message = get_flash(@conn, key) do %>
+    <div role="alert <%= key %>"><%= message %></div>
+  <% end %>
+<% end %>
+
+<main role="main">
+  <%= @inner_content %>
+</main>
